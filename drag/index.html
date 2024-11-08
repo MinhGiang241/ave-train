@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Document</title>
+    <style>
+      body {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas width="500px" height="500px" id="canvas"></canvas>
+    <script defer>
+      const canvas = document.getElementById("canvas");
+      const ctx = canvas.getContext("2d");
+
+      const circle = {
+        x: 250,
+        y: 250,
+        radius: 20,
+        color: "green",
+      };
+      function drawCircle() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.beginPath();
+        ctx.arc(circle.x, circle.y, circle.radius, 0, Math.PI * 100);
+        ctx.fillStyle = circle.color;
+        ctx.fill();
+        ctx.closePath();
+      }
+
+      canvas.addEventListener("mousedown", (e) => {
+        const mouseX = e.offsetX;
+        const mouseY = e.offsetY;
+
+        const dist = Math.sqrt(
+          (mouseX - circle.x) ** 2 + (mouseY - circle.y) ** 2,
+        );
+        if (dist <= circle.radius) {
+          circle.dragging = true;
+        }
+      });
+
+      canvas.addEventListener("mousemove", (e) => {
+        if (circle.dragging) {
+          circle.x = e.offsetX;
+          circle.y = e.offsetY;
+          drawCircle();
+        }
+      });
+
+      canvas.addEventListener("mouseup", () => {
+        circle.dragging = false;
+      });
+
+      drawCircle();
+    </script>
+  </body>
+</html>
