@@ -1,0 +1,47 @@
+@use "variables" as *;
+@use "sass:color";
+@use "sass:math";
+
+@each $key, $val in $colors {
+  .text-#{$key} {
+    color: $val;
+  }
+
+  .text-hover-#{$key} {
+    &:hover {
+      color: $val;
+    }
+  }
+
+  @if ($val !=black and $val !=white) {
+    // light variables
+    @for $i from 1 through 9 {
+      .text-#{$key}-light-#{$i} {
+        color: color.mix(white, $val, $i * 10 * 1%);
+      }
+      .bg-#{$key}-light-#{$i} {
+        background-color: color.mix(white, $val, $i * 10 * 1%);
+      }
+      .text-hover-#{$key}-light-#{$i} {
+        &:hover {
+          color: color.mix(white, $val, $i * 10 * 1%);
+        }
+      }
+    }
+
+    //dark variables
+    @for $i from 1 through 9 {
+      .text-#{$key}-dark-#{$i} {
+        color: color.mix(black, $val, $i * 10 * 1%);
+      }
+      .bg-#{$key}-dark-#{$i} {
+        background-color: color.mix(black, $val, $i * 10 * 1%);
+      }
+      .text-hover-#{$key}-dark-#{$i} {
+        &:hover {
+          color: color.mix(black, $val, $i * 10 * 1%);
+        }
+      }
+    }
+  }
+}
