@@ -1,5 +1,8 @@
 @use "scss/variables" as *;
+@use "scss/function";
+@use "scss/utilities";
 
 @use "scss/base";
 @use "scss/component/card";
 @use "scss/colors";
+@use "scss/component/button";
