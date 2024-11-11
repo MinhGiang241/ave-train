@@ -1,6 +1,7 @@
 @use "../variables" as *;
 @use "../function" as *;
 @use "sass:color";
+@use "../breakpoint" as *;
 
 @mixin btn($bg-color: #e2e2e2) {
   text-decoration: none;

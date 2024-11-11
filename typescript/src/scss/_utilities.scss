@@ -14,6 +14,39 @@ $utilities: (
       "5": $base-padding * 5,
     ),
   ),
+  "padding-top": (
+    "prefix": "pt",
+    "values": (
+      "0": 0,
+      "1": $base-padding,
+      "2": $base-padding * 2,
+      "3": $base-padding * 3,
+      "4": $base-padding * 4,
+      "5": $base-padding * 5,
+    ),
+  ),
+  "padding-bottom": (
+    "prefix": "pb",
+    "values": (
+      "0": 0,
+      "1": $base-padding,
+      "2": $base-padding * 2,
+      "3": $base-padding * 3,
+      "4": $base-padding * 4,
+      "5": $base-padding * 5,
+    ),
+  ),
+  "padding-right": (
+    "prefix": "pr",
+    "values": (
+      "0": 0,
+      "1": $base-padding,
+      "2": $base-padding * 2,
+      "3": $base-padding * 3,
+      "4": $base-padding * 4,
+      "5": $base-padding * 5,
+    ),
+  ),
   "padding-left": (
     "prefix": "pl",
     "values": (
@@ -51,7 +84,7 @@ $utilities: (
     ),
   ),
   "display": (
-    "prefix": "display",
+    "prefix": "dp",
     "values": (
       "n": none,
       "b": block,
@@ -79,8 +112,8 @@ $utilities: (
 
   @each $k, $v in $values {
     @if ($k == "default") {
-      .#{prefix} {
-        #{property}: $v;
+      .#{$prefix} {
+        #{$property}: $v;
       }
     } @else {
       .#{$prefix}-#{$k} {

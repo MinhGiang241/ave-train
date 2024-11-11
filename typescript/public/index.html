@@ -4,26 +4,68 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title></title>
-    <link href="css/index.css" rel="stylesheet" />
-    <script src="sandbox.js"></script>
+    <link rel="stylesheet" href="css/index.css"></link>
   </head>
   <body>
-    <h2>Cards</h2>
-    <div class="card">
-      <h1 class="card-title">This is a card title</h1>
-      <div class="card-body">
-        Consectetur,
-        <a
-          >tempor nisl eros vestibulum integer suspendisse nunc dictumst
-          congue</a
-        >. Et egestas nunc varius enim tempus in, nam justo turpis. .
+    <!-- navbar -->
+    <nav class="navbar">
+      <div class="container">
+        <h1 class="site-title">Design</h1>
+        <ul class="display-f">
+          <li class="ml-1 text-hover-secondary">
+            <a href="#">Our Work</a>
+          </li>
+          <li class="ml-1 text-hover-secondary">
+            <a href="#">About Us</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- intro -->
+    <div class="container mt-5">
+      <div class="row justify-center">
+        <div class="col-12-xs col-5-md">
+          <h2>
+            <div class="font-xxl">black Belt</div>
+            <div class="font-xxl text-secondary">Your website</div>
+          </h2>
+          <p class="text-gray mt-2 mb-3">
+            Blandit viverra neque consequat fringilla.
+          </p>
+          <a
+            href="#"
+            class="btn-outlined-secondary text-secondary text-hover-white"
+          >
+            View Our Work
+          </a>
+        </div>
+        <div class="col-12-xs col-5-md">
+          <img src="https://placehold.co/600x400" alt="img" />
+        </div>
       </div>
     </div>
-    <a href="#" class="btn-complement-primary"> Click me</a>
-    <div class="font-sm">Font-sm</div>
-    <div class="font-md">Font-md</div>
-    <div class="font-lg">Font-lg</div>
-    <div class="font-xl">Font-xl</div>
-    <div class="font-xxl">Font-xxl</div>
+
+    <!-- work section -->
+    <section id="about" class="bg-secondary-light-9 mt-5 pt-4 pb-4">
+      <div class="container">
+        <h2 class="mb-2">About Designs</h2>
+        <p>
+          Nulla, suspendisse magna fermentum dignissim suspendisse ultrices
+          pellentesque pulvinar justo. Vivamus maximus, sed sed praesent lectus,
+          ridiculus sit vitae pellentesque.
+        </p>
+        <p class="mt-1">
+          Fringilla mi sed ac fusce nullam penatibus massa non, dapibus. Est
+          morbi praesent iaculis metus nunc habitasse, vel, consectetur posuere.
+          Euismod, sit sem fringilla nam tempor ornare proin, id laoreet.
+        </p>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="bg-gray-light-7 pt-3 pb-3 mt-5">
+      <div class="container">copyright 2021 Design</div>
+    </footer>
   </body>
 </html>
